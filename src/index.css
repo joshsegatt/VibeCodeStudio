@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme CSS Variables - Default Dark+ */
+:root {
+  --editor-bg: #1E1E1E;
+  --sidebar-bg: #252526;
+  --activity-bar-bg: #333333;
+  --terminal-bg: #1E1E1E;
+  --status-bar-bg: #007ACC;
+  --border-color: #3C3C3C;
+  --text-primary: #FFFFFF;
+  --text-secondary: #CCCCCC;
+}
+
+/* Apply theme colors globally - Override Tailwind */
+[data-theme] {
+  background-color: var(--editor-bg);
+  color: var(--text-primary);
+}
+
+/* Sidebar backgrounds */
+.bg-\[\#1E1E1E\] {
+  background-color: var(--sidebar-bg) !important;
+}
+
+.bg-\[\#252526\] {
+  background-color: var(--sidebar-bg) !important;
+}
+
+.bg-\[\#333333\] {
+  background-color: var(--activity-bar-bg) !important;
+}
+
+/* Borders */
+.border-\[\#2D2D2D\],
+.border-\[\#3C3C3C\] {
+  border-color: var(--border-color) !important;
+}
+
+/* Text colors */
+.text-white {
+  color: var(--text-primary) !important;
+}
+
+.text-zinc-400,
+.text-zinc-500 {
+  color: var(--text-secondary) !important;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-white antialiased overflow-hidden selection:bg-blue-500/30;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl;
+  }
+
+  .glass-button {
+    @apply bg-white/5 hover:bg-white/10 active:bg-white/15 border border-white/5 hover:border-white/20 transition-all duration-300;
+  }
+}
+
+/* Breakpoint decorations */
+.breakpoint-glyph {
+  background: #e51400 !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  margin-left: 3px !important;
+  margin-top: 5px !important;
+}
+
+.breakpoint-decoration {
+  background: rgba(229, 20, 0, 0.1) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+}
+
+/* Text Glow Utility */
+.glow-text {
+  text-shadow: 0 0 30px rgba(255, 111, 0, 0.4);
+}
+
+/* Split View Styles */
+.split-view-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.split-panel {
+  height: 100%;
+  overflow: hidden;
+}
+
+.split-divider {
+  width: 4px;
+  background: #2D2D2D;
+  cursor: col-resize;
+  position: relative;
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.split-divider:hover,
+.split-divider.dragging {
+  background: #007ACC;
+}
+
+.split-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 40px;
+  background: #3C3C3C;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.split-divider:hover::before,
+.split-divider.dragging::before {
+  opacity: 1;
+}
+
+/* AI Completion Styles */
+.inline-completion-widget {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.inline-completion-hint {
+  opacity: 0;
+  transition: opacity 0.2s;
+  margin-left: 8px;
+  padding: 2px 6px;
+  background: rgba(0, 122, 204, 0.1);
+  border-radius: 3px;
+}
+
+.inline-completion-widget:hover .inline-completion-hint {
+  opacity: 1;
+}
+
+/* Completion suggestion text */
+.inline-completion-widget span {
+  font-family: 'JetBrains Mono', monospace;
+  color: #666;
+  font-style: italic;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.inline-completion-widget {
+  animation: fadeIn 0.15s ease-in;
+}

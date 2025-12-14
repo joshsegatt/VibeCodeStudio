@@ -1,0 +1,26 @@
+{
+    "identifier": "main-capability",
+    "description": "Capability for the main window",
+    "windows": [
+        "main"
+    ],
+    "permissions": [
+        "core:default",
+        "shell:allow-open",
+        "fs:allow-read-dir",
+        "fs:allow-read-file",
+        "fs:allow-write-file",
+        "fs:allow-create",
+        "fs:allow-remove",
+        "fs:allow-mkdir",
+        "fs:allow-exists",
+        "dialog:allow-open",
+        "dialog:allow-save",
+        "shell:allow-execute",
+        "core:window:allow-close",
+        "core:window:allow-minimize",
+        "core:window:allow-maximize",
+        "core:window:allow-toggle-maximize",
+        "core:window:allow-start-dragging"
+    ]
+}

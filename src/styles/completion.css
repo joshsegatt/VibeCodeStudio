@@ -1,0 +1,43 @@
+/* AI Completion Styles */
+.inline-completion-widget {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.inline-completion-hint {
+    opacity: 0;
+    transition: opacity 0.2s;
+    margin-left: 8px;
+    padding: 2px 6px;
+    background: rgba(0, 122, 204, 0.1);
+    border-radius: 3px;
+}
+
+.inline-completion-widget:hover .inline-completion-hint {
+    opacity: 1;
+}
+
+/* Completion suggestion text */
+.inline-completion-widget span {
+    font-family: 'JetBrains Mono', monospace;
+    color: #666;
+    font-style: italic;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.inline-completion-widget {
+    animation: fadeIn 0.15s ease-in;
+}
