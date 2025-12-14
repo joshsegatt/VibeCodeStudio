@@ -1,0 +1,93 @@
+
+src/features/explorer/FileTree.tsx(2,57): error TS6133: 'Plus' is declared but its value is never read.
+src/features/onboarding/CinematicIntro.tsx(2,37): error TS6133: 'Zap' is declared but its value is never read.
+src/features/onboarding/CinematicIntro.tsx(25,13): error TS2339: Property 'setModel' does not exist on type 'AppStore'.
+src/features/studio/ChatPanel.tsx(2,47): error TS6133: 'Box' is declared but its value is never read.
+src/features/studio/ChatPanel.tsx(6,44): error TS2339: Property 'agentMode' does not exist on type 'AppStore'.
+src/features/studio/ChatPanel.tsx(6,55): error TS2339: Property 'setAgentMode' does not exist on type 'AppStore'.
+src/features/studio/ChatPanel.tsx(6,83): error TS2339: Property 'currentPlan' does not exist on type 'AppStore'.
+src/features/studio/ChatPanel.tsx(26,19): error TS2554: Expected 2 arguments, but got 1.
+src/features/studio/ChatSidebar.tsx(6,44): error TS2339: Property 'agentMode' does not exist on type 'AppStore'.
+src/features/studio/ChatSidebar.tsx(6,55): error TS2339: Property 'setAgentMode' does not exist on type 'AppStore'.
+src/hooks/useAutoSave.ts(13,31): error TS2503: Cannot find namespace 'NodeJS'.
+src/services/aiReview.ts(133,20): error TS2503: Cannot find namespace 'NodeJS'.
+src/services/lsp/LSPClient.ts(8,5): error TS6133: 'Position' is declared but its value is never read.
+src/services/lsp/LSPClient.ts(42,26): error TS6133: 'params' is declared but its value is never read.
+src/services/lsp/LSPClient.ts(54,25): error TS6133: 'params' is declared but its value is never read.
+src/services/lsp/LSPClient.ts(65,20): error TS6133: 'params' is declared but its value is never read.
+src/services/providers/anthropic.ts(2,15): error TS6196: 'ChatMessage' is declared but never used.
+src/services/providers/anthropic.ts(2,81): error TS2307: Cannot find module '../types/ai' or its corresponding type declarations.
+src/services/providers/anthropic.ts(6,13): error TS6133: 'apiKey' is declared but its value is never read.
+src/services/providers/anthropic.ts(30,25): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/anthropic.ts(31,22): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/anthropic.ts(36,57): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/anthropic.ts(79,25): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/anthropic.ts(80,22): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/anthropic.ts(85,57): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/gemini.ts(2,15): error TS6196: 'ChatMessage' is declared but never used.
+src/services/providers/gemini.ts(2,81): error TS2307: Cannot find module '../types/ai' or its corresponding type declarations.
+src/services/providers/gemini.ts(6,13): error TS6133: 'apiKey' is declared but its value is never read.
+src/services/providers/gemini.ts(29,25): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/gemini.ts(30,22): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/gemini.ts(64,25): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/gemini.ts(65,22): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/openai.ts(2,15): error TS6196: 'ChatMessage' is declared but never used.
+src/services/providers/openai.ts(2,81): error TS2307: Cannot find module '../types/ai' or its corresponding type declarations.
+src/services/providers/openai.ts(6,13): error TS6133: 'apiKey' is declared but its value is never read.
+src/services/providers/openrouter.ts(2,15): error TS6196: 'ChatMessage' is declared but never used.
+src/services/providers/openrouter.ts(2,81): error TS2307: Cannot find module '../types/ai' or its corresponding type declarations.
+src/stores/appStore.ts(5,1): error TS6133: 'ModelId' is declared but its value is never read.
+src/stores/projectStore.ts(86,27): error TS6133: 'content' is declared but its value is never read.
+src/ui/actions/QuickActionsPanel.tsx(1,1): error TS6133: 'useState' is declared but its value is never read.
+src/ui/command/CommandPalette.tsx(2,18): error TS6133: 'FileText' is declared but its value is never read.
+src/ui/command/CommandPalette.tsx(2,28): error TS6133: 'GitBranch' is declared but its value is never read.
+src/ui/command/CommandPalette.tsx(2,39): error TS6133: 'Eye' is declared but its value is never read.
+src/ui/command/CommandPalette.tsx(2,44): error TS6133: 'Terminal' is declared but its value is never read.
+src/ui/command/CommandPalette.tsx(2,54): error TS6133: 'Zap' is declared but its value is never read.
+src/ui/command/CommandPalette.tsx(2,59): error TS6133: 'Settings' is declared but its value is never read.
+src/ui/completion/InlineCompletion.tsx(1,31): error TS6133: 'useRef' is declared but its value is never read.
+src/ui/completion/InlineCompletion.tsx(13,5): error TS6133: 'editor' is declared but its value is never read.
+src/ui/completion/InlineCompletion.tsx(14,5): error TS6133: 'position' is declared but its value is never read.
+src/ui/completion/InlineCompletion.tsx(59,60): error TS6133: 'e' is declared but its value is never read.
+src/ui/completion/InlineCompletion.tsx(92,24): error TS2304: Cannot find name 'monaco'.
+src/ui/components/Breadcrumbs.tsx(10,12): error TS6133: 'hoveredIndex' is declared but its value is never read.
+src/ui/components/DragDropZone.tsx(2,10): error TS6133: 'FolderOpen' is declared but its value is never read.
+src/ui/components/MarkdownMessage.tsx(2,44): error TS7016: Could not find a declaration file for module 'react-syntax-highlighter'. 'C:/Users/josh/Desktop/LLm playground/node_modules/react-syntax-highlighter/dist/cjs/index.js' implicitly has an 'any' type.
+src/ui/components/MarkdownMessage.tsx(3,29): error TS7016: Could not find a declaration file for module 'react-syntax-highlighter/dist/esm/styles/prism'. 'C:/Users/josh/Desktop/LLm playground/node_modules/react-syntax-highlighter/dist/esm/styles/prism/index.js' implicitly has an 'any' type.
+src/ui/components/MarkdownMessage.tsx(12,52): error TS6133: 'role' is declared but its value is never read.
+src/ui/components/MarkdownMessage.tsx(23,13): error TS2322: Type '{ children: string; className: string; components: { code({ node, inline, className, children, ...props }: ClassAttributes<HTMLElement> & HTMLAttributes<HTMLElement> & ExtraProps): Element; ... 9 more ...; em: ({ children }: ClassAttributes<...> & ... 1 more ... & ExtraProps) => Element; }; }' is not assignable to type 'IntrinsicAttributes & Readonly<Options>'.
+src/ui/components/MarkdownMessage.tsx(26,30): error TS2339: Property 'inline' does not exist on type 'ClassAttributes<HTMLElement> & HTMLAttributes<HTMLElement> & ExtraProps'.
+src/ui/components/ReviewPanel.tsx(1,20): error TS6133: 'useEffect' is declared but its value is never read.
+src/ui/components/ReviewPanel.tsx(1,31): error TS6133: 'useCallback' is declared but its value is never read.
+src/ui/editor/MonacoWrapper.tsx(8,8): error TS6133: 'InlineCompletion' is declared but its value is never read.
+src/ui/editor/MonacoWrapper.tsx(30,11): error TS6198: All destructured elements are unused.
+src/ui/editor/MonacoWrapper.tsx(103,21): error TS2741: Property 'range' is missing in type '{ label: string; kind: languages.CompletionItemKind.Keyword; insertText: string; }' but required in type 'CompletionItem'.
+src/ui/editor/MonacoWrapper.tsx(104,21): error TS2741: Property 'range' is missing in type '{ label: string; kind: languages.CompletionItemKind.Keyword; insertText: string; }' but required in type 'CompletionItem'.
+src/ui/editor/MonacoWrapper.tsx(105,21): error TS2741: Property 'range' is missing in type '{ label: string; kind: languages.CompletionItemKind.Keyword; insertText: string; }' but required in type 'CompletionItem'.
+src/ui/editor/MonacoWrapper.tsx(106,21): error TS2741: Property 'range' is missing in type '{ label: string; kind: languages.CompletionItemKind.Keyword; insertText: string; }' but required in type 'CompletionItem'.
+src/ui/editor/MultiTabEditor.tsx(14,71): error TS6133: 'markFileDirty' is declared but its value is never read.
+src/ui/git/DiffViewer.tsx(5,12): error TS6133: 'selectedFile' is declared but its value is never read.
+src/ui/git/DiffViewer.tsx(8,11): error TS6133: 'loadDiff' is declared but its value is never read.
+src/ui/git/DiffViewer.tsx(10,28): error TS2554: Expected 2 arguments, but got 1.
+src/ui/layouts/AppleLayout.tsx(2,56): error TS6133: 'Sparkles' is declared but its value is never read.
+src/ui/layouts/AppleLayout.tsx(2,79): error TS6133: 'Settings' is declared but its value is never read.
+src/ui/layouts/IDELayout.tsx(33,13): error TS6133: 'generateProject' is declared but its value is never read.
+src/ui/layouts/IDELayout.tsx(39,12): error TS6133: 'splitRatio' is declared but its value is never read.
+src/ui/layouts/IDELayout.tsx(39,24): error TS6133: 'setSplitRatio' is declared but its value is never read.
+src/ui/layouts/IDELayout.tsx(40,12): error TS6133: 'isDragging' is declared but its value is never read.
+src/ui/layouts/IDELayout.tsx(40,24): error TS6133: 'setIsDragging' is declared but its value is never read.
+src/ui/layouts/IDELayout.tsx(60,28): error TS6133: 'setCursorPosition' is declared but its value is never read.
+src/ui/layouts/IDELayout.tsx(239,17): error TS6133: 'tokenUsage' is declared but its value is never read.
+src/ui/layouts/IDELayout.tsx(240,17): error TS6133: 'cost' is declared but its value is never read.
+src/ui/snippets/SnippetsPanel.tsx(2,10): error TS6133: 'Wand2' is declared but its value is never read.
+src/ui/snippets/SnippetsPanel.tsx(2,23): error TS6133: 'FileCode' is declared but its value is never read.
+src/ui/statusbar/StatusBar.tsx(2,20): error TS6133: 'useEffect' is declared but its value is never read.
+src/ui/statusbar/StatusBar.tsx(10,23): error TS6133: 'setGitBranch' is declared but its value is never read.
+src/ui/statusbar/StatusBar.tsx(11,24): error TS6133: 'setHasChanges' is declared but its value is never read.
+src/ui/statusbar/StatusBar.tsx(12,24): error TS6133: 'setSyncStatus' is declared but its value is never read.
+src/ui/terminal/MultiTerminal.tsx(1,35): error TS2307: Cannot find module 'xterm' or its corresponding type declarations.
+src/ui/terminal/MultiTerminal.tsx(2,1): error TS6133: 'FitAddon' is declared but its value is never read.
+src/ui/terminal/MultiTerminal.tsx(2,26): error TS2307: Cannot find module 'xterm-addon-fit' or its corresponding type declarations.
+src/ui/terminal/MultiTerminal.tsx(3,10): error TS6133: 'useEffect' is declared but its value is never read.
+src/utils/errorHandler.ts(31,25): error TS2339: Property 'env' does not exist on type 'ImportMeta'.
+
