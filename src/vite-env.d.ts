@@ -7,6 +7,9 @@ declare namespace NodeJS {
     type Timer = number;
 }
 
+// Monaco global for editor
+declare const monaco: any;
+
 // Module declarations for packages without types
 declare module 'xterm' {
     export class Terminal {
@@ -42,4 +45,18 @@ interface ImportMetaEnv {
 
 interface ImportMeta {
     readonly env: ImportMetaEnv
+}
+
+// ReactMarkdown type overrides for flexible components
+declare module 'react-markdown' {
+    import { Component } from 'react';
+
+    export interface Options {
+        children: string;
+        className?: string;
+        components?: any;
+        [key: string]: any;
+    }
+
+    export default class ReactMarkdown extends Component<Options> { }
 }
