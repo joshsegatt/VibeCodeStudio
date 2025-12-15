@@ -61,13 +61,13 @@ export default function ChatPanel() {
                             <label className="text-xs text-gray-500 uppercase font-bold tracking-wider">Agent Mode</label>
                             <div className="flex bg-white/5 rounded-lg p-1 border border-white/10">
                                 <button
-                                    onClick={() => setAgentMode('normal')}
+                                    onClick={() => setAgentMode?.('normal')}
                                     className={`flex-1 py-1.5 text-xs font-bold rounded-md transition-all ${agentMode === 'normal' ? 'bg-blue-500/20 text-blue-400' : 'text-gray-500 hover:text-white'}`}
                                 >
                                     NORMAL
                                 </button>
                                 <button
-                                    onClick={() => setAgentMode('architect')}
+                                    onClick={() => setAgentMode?.('architect')}
                                     className={`flex-1 py-1.5 text-xs font-bold rounded-md transition-all ${agentMode === 'architect' ? 'bg-purple-500/20 text-purple-400 shadow-[0_0_10px_rgba(168,85,247,0.2)]' : 'text-gray-500 hover:text-white'}`}
                                 >
                                     ARCHITECT

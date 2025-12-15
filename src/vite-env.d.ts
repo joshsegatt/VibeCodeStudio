@@ -1,6 +1,12 @@
 /// <reference types="vite/client" />
 /// <reference types="node" />
 
+// NodeJS namespace for browser environment
+declare namespace NodeJS {
+    type Timeout = number;
+    type Timer = number;
+}
+
 // Module declarations for packages without types
 declare module 'xterm' {
     export class Terminal {

@@ -121,13 +121,13 @@ export default function ChatSidebar() {
                             <label className="text-[10px] text-zinc-500 uppercase font-bold tracking-wider">Operation Mode</label>
                             <div className="flex bg-[#09090b] rounded-lg border border-white/5 p-1">
                                 <button
-                                    onClick={() => setAgentMode('normal')}
+                                    onClick={() => setAgentMode?.('normal')}
                                     className={`flex-1 py-1.5 text-[10px] font-medium rounded-md transition-all ${agentMode === 'normal' ? 'bg-[#27272a] text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`}
                                 >
                                     Efficient
                                 </button>
                                 <button
-                                    onClick={() => setAgentMode('architect')}
+                                    onClick={() => setAgentMode?.('architect')}
                                     className={`flex-1 py-1.5 text-[10px] font-medium rounded-md transition-all ${agentMode === 'architect' ? 'bg-[#27272a] text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`}
                                 >
                                     Architect

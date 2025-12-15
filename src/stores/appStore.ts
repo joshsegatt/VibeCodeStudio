@@ -38,8 +38,8 @@ interface AppStore {
     setProvider: (provider: string) => void;
 
     // Agent mode (optional features)
-    agentMode?: 'code' | 'architect';
-    setAgentMode?: (mode: 'code' | 'architect') => void;
+    agentMode?: 'code' | 'architect' | 'normal';
+    setAgentMode?: (mode: 'code' | 'architect' | 'normal') => void;
     currentPlan?: string;
     setAPIKey: (provider: keyof APIKeys, key: string) => Promise<void>;
     getAPIKey: (provider: keyof APIKeys) => Promise<string | undefined>;
