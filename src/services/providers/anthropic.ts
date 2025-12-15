@@ -27,13 +27,13 @@ export class AnthropicProvider {
         try {
             // Convert messages format
             const messages = request.messages
-                .filter(m => m.role !== 'system')
-                .map(m => ({
+                .filter((m: ChatMessage) => m.role !== 'system')
+                .map((m: ChatMessage) => ({
                     role: m.role as 'user' | 'assistant',
                     content: m.content
                 }));
 
-            const systemMessage = request.messages.find(m => m.role === 'system')?.content;
+            const systemMessage = request.messages.find((m: ChatMessage) => m.role === 'system')?.content;
 
             const response = await this.client.messages.create({
                 model: request.model,
@@ -76,13 +76,13 @@ export class AnthropicProvider {
 
         try {
             const messages = request.messages
-                .filter(m => m.role !== 'system')
-                .map(m => ({
+                .filter((m: ChatMessage) => m.role !== 'system')
+                .map((m: ChatMessage) => ({
                     role: m.role as 'user' | 'assistant',
                     content: m.content
                 }));
 
-            const systemMessage = request.messages.find(m => m.role === 'system')?.content;
+            const systemMessage = request.messages.find((m: ChatMessage) => m.role === 'system')?.content;
 
             const stream = await this.client.messages.create({
                 model: request.model,

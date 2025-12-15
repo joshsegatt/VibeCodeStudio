@@ -1,8 +1,37 @@
 /// <reference types="vite/client" />
+/// <reference types="node" />
+
+// Module declarations for packages without types
+declare module 'xterm' {
+    export class Terminal {
+        constructor(options?: any);
+        open(container: HTMLElement): void;
+        write(data: string): void;
+        onData(callback: (data: string) => void): void;
+        dispose(): void;
+        loadAddon(addon: any): void;
+    }
+}
+
+declare module 'xterm-addon-fit' {
+    export class FitAddon {
+        constructor();
+        fit(): void;
+    }
+}
+
+declare module 'react-syntax-highlighter' {
+    import { Component } from 'react';
+    export class Prism extends Component<any> { }
+    export default class SyntaxHighlighter extends Component<any> { }
+}
+
+declare module 'react-syntax-highlighter/dist/esm/styles/prism' {
+    export const vscDarkPlus: any;
+}
 
 interface ImportMetaEnv {
     readonly VITE_APP_TITLE: string
-    // Add more env variables as needed
 }
 
 interface ImportMeta {

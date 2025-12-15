@@ -1,0 +1,27 @@
+
+src/features/studio/ChatPanel.tsx(26,19): error TS2554: Expected 2 arguments, but got 1.
+src/features/studio/ChatPanel.tsx(64,52): error TS2722: Cannot invoke an object which is possibly 'undefined'.
+src/features/studio/ChatPanel.tsx(64,65): error TS2345: Argument of type '"normal"' is not assignable to parameter of type '"code" | "architect"'.
+src/features/studio/ChatPanel.tsx(65,109): error TS2367: This comparison appears to be unintentional because the types '"code" | "architect" | undefined' and '"normal"' have no overlap.
+src/features/studio/ChatPanel.tsx(70,52): error TS2722: Cannot invoke an object which is possibly 'undefined'.
+src/features/studio/ChatSidebar.tsx(124,52): error TS2722: Cannot invoke an object which is possibly 'undefined'.
+src/features/studio/ChatSidebar.tsx(124,65): error TS2345: Argument of type '"normal"' is not assignable to parameter of type '"code" | "architect"'.
+src/features/studio/ChatSidebar.tsx(125,115): error TS2367: This comparison appears to be unintentional because the types '"code" | "architect" | undefined' and '"normal"' have no overlap.
+src/features/studio/ChatSidebar.tsx(130,52): error TS2722: Cannot invoke an object which is possibly 'undefined'.
+src/hooks/useAutoSave.ts(13,31): error TS2503: Cannot find namespace 'NodeJS'.
+src/services/aiReview.ts(133,20): error TS2503: Cannot find namespace 'NodeJS'.
+src/services/providers/anthropic.ts(40,37): error TS2551: Property 'maxTokens' does not exist on type 'ChatCompletionRequest'. Did you mean 'max_tokens'?
+src/services/providers/anthropic.ts(61,21): error TS2322: Type '{ promptTokens: number; completionTokens: number; totalTokens: number; } | undefined' is not assignable to type '{ prompt_tokens: number; completion_tokens: number; total_tokens: number; } | undefined'.
+src/services/providers/anthropic.ts(89,37): error TS2551: Property 'maxTokens' does not exist on type 'ChatCompletionRequest'. Did you mean 'max_tokens'?
+src/services/providers/openai.ts(32,37): error TS2551: Property 'maxTokens' does not exist on type 'ChatCompletionRequest'. Did you mean 'max_tokens'?
+src/services/providers/openai.ts(52,21): error TS2322: Type '{ promptTokens: number; completionTokens: number; totalTokens: number; } | undefined' is not assignable to type '{ prompt_tokens: number; completion_tokens: number; total_tokens: number; } | undefined'.
+src/services/providers/openai.ts(73,37): error TS2551: Property 'maxTokens' does not exist on type 'ChatCompletionRequest'. Did you mean 'max_tokens'?
+src/services/providers/openrouter.ts(30,41): error TS2551: Property 'maxTokens' does not exist on type 'ChatCompletionRequest'. Did you mean 'max_tokens'?
+src/services/providers/openrouter.ts(48,21): error TS2322: Type '{ promptTokens: any; completionTokens: any; totalTokens: any; } | undefined' is not assignable to type '{ prompt_tokens: number; completion_tokens: number; total_tokens: number; } | undefined'.
+src/services/providers/openrouter.ts(77,41): error TS2551: Property 'maxTokens' does not exist on type 'ChatCompletionRequest'. Did you mean 'max_tokens'?
+src/ui/completion/InlineCompletion.tsx(92,24): error TS2304: Cannot find name 'monaco'.
+src/ui/components/MarkdownMessage.tsx(23,13): error TS2322: Type '{ children: string; className: string; components: { code({ node, inline, className, children, ...props }: ClassAttributes<HTMLElement> & HTMLAttributes<HTMLElement> & ExtraProps): Element; ... 9 more ...; em: ({ children }: ClassAttributes<...> & ... 1 more ... & ExtraProps) => Element; }; }' is not assignable to type 'IntrinsicAttributes & Readonly<Options>'.
+src/ui/components/MarkdownMessage.tsx(26,30): error TS2339: Property 'inline' does not exist on type 'ClassAttributes<HTMLElement> & HTMLAttributes<HTMLElement> & ExtraProps'.
+src/ui/components/MarkdownMessage.tsx(56,30): error TS2769: No overload matches this call.
+src/ui/git/DiffViewer.tsx(10,28): error TS2554: Expected 2 arguments, but got 1.
+

@@ -1,0 +1,37 @@
+
+src/features/onboarding/CinematicIntro.tsx(25,13): error TS2339: Property 'setModel' does not exist on type 'AppStore'.
+src/features/studio/ChatPanel.tsx(6,44): error TS2339: Property 'agentMode' does not exist on type 'AppStore'.
+src/features/studio/ChatPanel.tsx(6,55): error TS2339: Property 'setAgentMode' does not exist on type 'AppStore'.
+src/features/studio/ChatPanel.tsx(6,83): error TS2339: Property 'currentPlan' does not exist on type 'AppStore'.
+src/features/studio/ChatPanel.tsx(26,19): error TS2554: Expected 2 arguments, but got 1.
+src/features/studio/ChatSidebar.tsx(6,44): error TS2339: Property 'agentMode' does not exist on type 'AppStore'.
+src/features/studio/ChatSidebar.tsx(6,55): error TS2339: Property 'setAgentMode' does not exist on type 'AppStore'.
+src/hooks/useAutoSave.ts(13,31): error TS2503: Cannot find namespace 'NodeJS'.
+src/services/aiReview.ts(133,20): error TS2503: Cannot find namespace 'NodeJS'.
+src/services/providers/anthropic.ts(2,81): error TS2307: Cannot find module '../types/ai' or its corresponding type declarations.
+src/services/providers/anthropic.ts(30,25): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/anthropic.ts(31,22): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/anthropic.ts(36,57): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/anthropic.ts(79,25): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/anthropic.ts(80,22): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/anthropic.ts(85,57): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/gemini.ts(2,81): error TS2307: Cannot find module '../types/ai' or its corresponding type declarations.
+src/services/providers/gemini.ts(29,25): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/gemini.ts(30,22): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/gemini.ts(64,25): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/gemini.ts(65,22): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/services/providers/openai.ts(2,81): error TS2307: Cannot find module '../types/ai' or its corresponding type declarations.
+src/services/providers/openrouter.ts(2,81): error TS2307: Cannot find module '../types/ai' or its corresponding type declarations.
+src/ui/completion/InlineCompletion.tsx(92,24): error TS2304: Cannot find name 'monaco'.
+src/ui/components/MarkdownMessage.tsx(2,44): error TS7016: Could not find a declaration file for module 'react-syntax-highlighter'. 'C:/Users/josh/Desktop/LLm playground/node_modules/react-syntax-highlighter/dist/cjs/index.js' implicitly has an 'any' type.
+src/ui/components/MarkdownMessage.tsx(3,29): error TS7016: Could not find a declaration file for module 'react-syntax-highlighter/dist/esm/styles/prism'. 'C:/Users/josh/Desktop/LLm playground/node_modules/react-syntax-highlighter/dist/esm/styles/prism/index.js' implicitly has an 'any' type.
+src/ui/components/MarkdownMessage.tsx(23,13): error TS2322: Type '{ children: string; className: string; components: { code({ node, inline, className, children, ...props }: ClassAttributes<HTMLElement> & HTMLAttributes<HTMLElement> & ExtraProps): Element; ... 9 more ...; em: ({ children }: ClassAttributes<...> & ... 1 more ... & ExtraProps) => Element; }; }' is not assignable to type 'IntrinsicAttributes & Readonly<Options>'.
+src/ui/components/MarkdownMessage.tsx(26,30): error TS2339: Property 'inline' does not exist on type 'ClassAttributes<HTMLElement> & HTMLAttributes<HTMLElement> & ExtraProps'.
+src/ui/editor/MonacoWrapper.tsx(103,21): error TS2741: Property 'range' is missing in type '{ label: string; kind: languages.CompletionItemKind.Keyword; insertText: string; }' but required in type 'CompletionItem'.
+src/ui/editor/MonacoWrapper.tsx(104,21): error TS2741: Property 'range' is missing in type '{ label: string; kind: languages.CompletionItemKind.Keyword; insertText: string; }' but required in type 'CompletionItem'.
+src/ui/editor/MonacoWrapper.tsx(105,21): error TS2741: Property 'range' is missing in type '{ label: string; kind: languages.CompletionItemKind.Keyword; insertText: string; }' but required in type 'CompletionItem'.
+src/ui/editor/MonacoWrapper.tsx(106,21): error TS2741: Property 'range' is missing in type '{ label: string; kind: languages.CompletionItemKind.Keyword; insertText: string; }' but required in type 'CompletionItem'.
+src/ui/git/DiffViewer.tsx(10,28): error TS2554: Expected 2 arguments, but got 1.
+src/ui/terminal/MultiTerminal.tsx(1,35): error TS2307: Cannot find module 'xterm' or its corresponding type declarations.
+src/ui/terminal/MultiTerminal.tsx(2,26): error TS2307: Cannot find module 'xterm-addon-fit' or its corresponding type declarations.
+

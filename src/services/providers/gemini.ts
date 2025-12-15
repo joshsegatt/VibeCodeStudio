@@ -26,8 +26,8 @@ export class GeminiProvider {
 
             // Convert messages to Gemini format
             const history = request.messages
-                .filter(m => m.role !== 'system')
-                .map(m => ({
+                .filter((m: ChatMessage) => m.role !== 'system')
+                .map((m: ChatMessage) => ({
                     role: m.role === 'user' ? 'user' : 'model',
                     parts: [{ text: m.content }]
                 }));
@@ -61,8 +61,8 @@ export class GeminiProvider {
             const model = this.client.getGenerativeModel({ model: request.model });
 
             const history = request.messages
-                .filter(m => m.role !== 'system')
-                .map(m => ({
+                .filter((m: ChatMessage) => m.role !== 'system')
+                .map((m: ChatMessage) => ({
                     role: m.role === 'user' ? 'user' : 'model',
                     parts: [{ text: m.content }]
                 }));

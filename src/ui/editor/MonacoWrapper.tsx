@@ -98,12 +98,52 @@ export default function MonacoWrapper({ initialValue, filePath, language = 'type
 
         // Python language configuration
         monaco.languages.registerCompletionItemProvider('python', {
-            provideCompletionItems: () => ({
+            provideCompletionItems: (model, position) => ({
                 suggestions: [
-                    { label: 'def', kind: monaco.languages.CompletionItemKind.Keyword, insertText: 'def ${1:function_name}(${2:params}):\n    ${3:pass}' },
-                    { label: 'class', kind: monaco.languages.CompletionItemKind.Keyword, insertText: 'class ${1:ClassName}:\n    ${2:pass}' },
-                    { label: 'if', kind: monaco.languages.CompletionItemKind.Keyword, insertText: 'if ${1:condition}:\n    ${2:pass}' },
-                    { label: 'for', kind: monaco.languages.CompletionItemKind.Keyword, insertText: 'for ${1:item} in ${2:items}:\n    ${3:pass}' },
+                    {
+                        label: 'def',
+                        kind: monaco.languages.CompletionItemKind.Keyword,
+                        insertText: 'def ${1:function_name}(${2:params}):\n    ${3:pass}',
+                        range: {
+                            startLineNumber: position.lineNumber,
+                            startColumn: position.column,
+                            endLineNumber: position.lineNumber,
+                            endColumn: position.column
+                        }
+                    },
+                    {
+                        label: 'class',
+                        kind: monaco.languages.CompletionItemKind.Keyword,
+                        insertText: 'class ${1:ClassName}:\n    ${2:pass}',
+                        range: {
+                            startLineNumber: position.lineNumber,
+                            startColumn: position.column,
+                            endLineNumber: position.lineNumber,
+                            endColumn: position.column
+                        }
+                    },
+                    {
+                        label: 'if',
+                        kind: monaco.languages.CompletionItemKind.Keyword,
+                        insertText: 'if ${1:condition}:\n    ${2:pass}',
+                        range: {
+                            startLineNumber: position.lineNumber,
+                            startColumn: position.column,
+                            endLineNumber: position.lineNumber,
+                            endColumn: position.column
+                        }
+                    },
+                    {
+                        label: 'for',
+                        kind: monaco.languages.CompletionItemKind.Keyword,
+                        insertText: 'for ${1:item} in ${2:items}:\n    ${3:pass}',
+                        range: {
+                            startLineNumber: position.lineNumber,
+                            startColumn: position.column,
+                            endLineNumber: position.lineNumber,
+                            endColumn: position.column
+                        }
+                    },
                 ]
             })
         });

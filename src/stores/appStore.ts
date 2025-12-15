@@ -34,7 +34,13 @@ interface AppStore {
     setPhase: (phase: AppPhase) => void;
     setSystemPrompt: (prompt: string) => void;
     setCurrentModel: (model: string) => void;
+    setModel: (model: string) => void; // Alias for setCurrentModel
     setProvider: (provider: string) => void;
+
+    // Agent mode (optional features)
+    agentMode?: 'code' | 'architect';
+    setAgentMode?: (mode: 'code' | 'architect') => void;
+    currentPlan?: string;
     setAPIKey: (provider: keyof APIKeys, key: string) => Promise<void>;
     getAPIKey: (provider: keyof APIKeys) => Promise<string | undefined>;
     migrateAPIKeys: () => Promise<void>;
@@ -67,7 +73,13 @@ export const useAppStore = create<AppStore>()(
             setPhase: (phase) => set({ appPhase: phase }),
             setSystemPrompt: (prompt) => set({ systemPrompt: prompt }),
             setCurrentModel: (model) => set({ currentModel: model }),
+            setModel: (model) => set({ currentModel: model }), // Alias
             setProvider: (provider) => set({ provider }),
+
+            // Agent mode
+            agentMode: 'code',
+            setAgentMode: (mode) => set({ agentMode: mode }),
+            currentPlan: undefined,
 
             setAPIKey: async (provider, key) => {
                 try {
