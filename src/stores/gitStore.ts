@@ -35,7 +35,7 @@ export interface GitStore {
     pull: (path: string) => Promise<void>;
     getBranches: (path: string) => Promise<string[]>;
     checkout: (path: string, branch: string) => Promise<void>;
-    getDiff: (path: string, file: string) => Promise<string>;
+    getDiff: (path: string, file?: string) => Promise<string>;
     getHistory: (path: string, limit: number) => Promise<void>;
 }
 
@@ -149,9 +149,9 @@ export const useGitStore = create<GitStore>((set, get) => ({
         }
     },
 
-    getDiff: async (path: string, file: string) => {
+    getDiff: async (path: string, file?: string) => {
         try {
-            const diff = await invoke<string>('git_diff', { path, file });
+            const diff = await invoke<string>('git_diff', { path, file: file || '' });
             return diff;
         } catch (error) {
             ErrorHandler.handle(error, 'Failed to get diff');

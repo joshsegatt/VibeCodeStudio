@@ -58,9 +58,9 @@ export class AnthropicProvider {
             return {
                 content,
                 usage: response.usage ? {
-                    promptTokens: response.usage.input_tokens,
-                    completionTokens: response.usage.output_tokens,
-                    totalTokens: response.usage.input_tokens + response.usage.output_tokens,
+                    prompt_tokens: response.usage.input_tokens,
+                    completion_tokens: response.usage.output_tokens,
+                    total_tokens: response.usage.input_tokens + response.usage.output_tokens,
                 } : undefined,
                 cost,
             };

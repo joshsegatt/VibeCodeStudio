@@ -49,9 +49,9 @@ export class OpenAIProvider {
             return {
                 content,
                 usage: usage ? {
-                    promptTokens: usage.prompt_tokens,
-                    completionTokens: usage.completion_tokens,
-                    totalTokens: usage.total_tokens,
+                    prompt_tokens: usage.prompt_tokens,
+                    completion_tokens: usage.completion_tokens,
+                    total_tokens: usage.total_tokens,
                 } : undefined,
                 cost,
             };

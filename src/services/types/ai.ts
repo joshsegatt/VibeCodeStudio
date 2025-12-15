@@ -10,6 +10,7 @@ export interface ChatCompletionRequest {
     messages: ChatMessage[];
     temperature?: number;
     max_tokens?: number;
+    maxTokens?: number; // Alias for max_tokens
     stream?: boolean;
 }
 

@@ -50,8 +50,8 @@ interface AppStore {
     setCode: (code: string) => void;
     setCurrentResponse: (response: string) => void;
     // Streaming Actions
-    generateCode: (prompt: string, onResponse: (response: string) => void) => Promise<void>;
-    generateProject: (prompt: string, onResponse: (response: string) => void) => Promise<string>;
+    generateCode: (prompt: string, onResponse?: (response: string) => void) => Promise<void>;
+    generateProject: (prompt: string, onResponse?: (response: string) => void) => Promise<string>;
 }
 
 export const useAppStore = create<AppStore>()(
@@ -138,7 +138,7 @@ export const useAppStore = create<AppStore>()(
             setCode: (code) => set({ generatedCode: code }),
             setCurrentResponse: (response) => set({ currentResponse: response }),
 
-            generateCode: async (prompt: string, onResponse: (response: string) => void) => {
+            generateCode: async (prompt: string, onResponse?: (response: string) => void) => {
                 const state = get();
                 if (!state.currentModel) return;
 
@@ -153,7 +153,7 @@ export const useAppStore = create<AppStore>()(
 
                     // Update current response in real-time
                     set({ currentResponse: fullResponse });
-                    onResponse(fullResponse);
+                    onResponse?.(fullResponse);
 
                     // Try to extract code block from response
                     const codeBlockMatch = fullResponse.match(/```(?:tsx|jsx|html|typescript|javascript|python|rust|go)?\n([\s\S]*?)```/);
@@ -192,7 +192,7 @@ export const useAppStore = create<AppStore>()(
             },
 
             // New: Generate entire project with multiple files
-            generateProject: async (prompt: string, onResponse: (response: string) => void): Promise<string> => {
+            generateProject: async (prompt: string, onResponse?: (response: string) => void): Promise<string> => {
                 const state = get();
                 if (!state.currentModel) throw new Error("No model selected");
 
@@ -226,7 +226,7 @@ Generate ALL necessary files for a working project.`;
                     const payload = event.payload as { token: string };
                     fullResponse += payload.token;
                     set({ currentResponse: fullResponse });
-                    onResponse(fullResponse);
+                    onResponse?.(fullResponse);
                 });
 
                 const unlistenFinish = await listen('generate-finished', () => {
